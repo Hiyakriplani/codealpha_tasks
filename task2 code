@@ -1,0 +1,17 @@
+import pandas as pd
+
+df = pd.read_csv("books_dataset.csv")
+
+df["Price"] = df["Price"].replace("Â£","", regex=True).astype(float)
+
+print("Number of Books:", len(df))
+print("Average Price:", df["Price"].mean())
+
+print("\nHighest Price:")
+print(df.nlargest(5,"Price"))
+
+print("\nLowest Price:")
+print(df.nsmallest(5,"Price"))
+
+print("\nAvailability:")
+print(df["Availability"].value_counts())
