@@ -1,0 +1,17 @@
+Task 1: Web Scraping
+
+Collected book data such as title, price, and availability from a public website using BeautifulSoup and stored the extracted information in a CSV file for further analysis.
+
+Task 2: Exploratory Data Analysis (EDA)
+
+Analyzed the scraped dataset to understand its structure, calculated basic statistics, and identified patterns such as price distribution and book availability.
+
+Task 3: Data Visualization
+
+Created charts using Matplotlib to visually represent the dataset, making it easier to interpret trends and compare different aspects of the data.
+
+Task 4: Sentiment Analysis
+
+Performed sentiment analysis on sample product reviews using TextBlob to classify each review as Positive, Negative, or Neutral based on its sentiment score.
+
+THE OUTPUT, SOURCE CODE, AND RESULTS FOR ALL THE TASKS PERFORMED ARE AVAILABLE IN THIS REPOSITORY. THE COMPLETE IMPLEMENTATION, INCLUDING THE GOOGLE COLAB NOTEBOOK WITH CODE, OUTPUTS, AND RESULTS, IS LINKED BELOW.
