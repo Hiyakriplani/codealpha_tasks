@@ -1,0 +1,33 @@
+from textblob import TextBlob
+import pandas as pd
+
+reviews = [
+    "Amazing product! Highly recommended.",
+    "Very bad quality.",
+    "Excellent value for money.",
+    "Worst purchase ever.",
+    "Good product and fast delivery.",
+    "Not worth the price.",
+    "Fantastic!",
+    "Average experience."
+]
+
+results = []
+
+for review in reviews:
+    polarity = TextBlob(review).sentiment.polarity
+
+    if polarity > 0:
+        sentiment = "Positive"
+    elif polarity < 0:
+        sentiment = "Negative"
+    else:
+        sentiment = "Neutral"
+
+    results.append([review, polarity, sentiment])
+
+df = pd.DataFrame(results, columns=["Review","Polarity","Sentiment"])
+
+print(df)
+
+df.to_csv("sentiment_results.csv", index=False)
